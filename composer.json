@@ -1,0 +1,25 @@
+{
+  "name": "synga/console-abstraction",
+  "description": "Due to the differences in the cli interaction in a lot of the frameworks, it is handy to have one way to handle the console interaction.",
+  "autoload": {
+    "psr-4" : {
+      "Synga\\ConsoleAbstraction\\" : "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Roy Pouls",
+      "email": "packagist@synga.nl",
+      "homepage": "https://www.synga.nl"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4",
+    "symfony/console": "3.0.*",
+    "illuminate/console": "5.2.*"
+  },
+  "require-dev" : {
+    "phpunit/phpunit": "5.1.*"
+  }
+}
