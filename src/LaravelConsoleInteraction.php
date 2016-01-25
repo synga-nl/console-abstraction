@@ -124,6 +124,6 @@ class LaravelConsoleInteraction implements ConsoleInteractionInterface
      * @return mixed
      */
     public function createProgressBar($max = 0) {
-        return $this->createProgressBar($max);
+        return $this->command->createProgressBar($max);
     }
 }
