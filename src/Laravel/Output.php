@@ -1,18 +1,28 @@
 <?php
-namespace Synga\ConsoleAbstraction;
+/**
+ * Synga Inheritance Finder
+ * @author      Roy Pouls
+ * @copytright  2016 Roy Pouls / Synga (http://www.synga.nl)
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+ * @link        https://github.com/synga-nl/inheritance-finder
+ */
+
+namespace Synga\ConsoleAbstraction\Laravel;
+
 
 use Illuminate\Console\Command;
+use Synga\ConsoleAbstraction\Contracts\OutputInterface;
 
-/**
- * Class LaravelConsoleInteraction
- * @package Synga\ConsoleAbstraction
- */
-class LaravelConsoleInteraction implements ConsoleInteractionInterface
+class Output implements OutputInterface
 {
     /**
      * @var Command
      */
     protected $command;
+
+    public function __construct(Command $command) {
+        $this->command = $command;
+    }
 
     /**
      * @param Command $command
@@ -90,7 +100,7 @@ class LaravelConsoleInteraction implements ConsoleInteractionInterface
     /**
      * @param $string
      */
-    public function warn($string) {
+    public function warning($string) {
         $this->command->warn($string);
     }
 
